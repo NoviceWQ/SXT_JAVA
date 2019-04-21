@@ -1,24 +1,24 @@
-package FileÀà;
+package com.sxt.file;
 
 import java.io.File;
-public class DiGuiDemo2 {
+public class FileTool02 {
 
 	public static void main(String[] args) {
-		// ´´½¨File¶ÔÏó
-		File dir = new File("F:\\N4X\\123");
+		// åˆ›å»ºFileå¯¹è±¡
+		File dir = new File("F:/N4X/123");
 		printDir(dir);
 	}
 	
 	public static void printDir(File dir) {
-		// »ñÈ¡×ÓÎÄ¼şºÍÄ¿Â¼
+		// è·å–å­æ–‡ä»¶å’Œç›®å½•
 		File[] files = dir.listFiles();
 		for(File file:files) {
-			//µ±ÊÇÎÄ¼şÊ±,´òÓ¡¾ø¶ÔÂ·¾¶.
+			//å½“æ˜¯æ–‡ä»¶æ—¶,æ‰“å°ç»å¯¹è·¯å¾„.
 			if(file.isFile()) {
-				System.out.println("ÎÄ¼şÃû:  "+file.getAbsolutePath());
-			//µ±ÊÇÄ¿Â¼Ê±,¼ÌĞøµ÷ÓÃ´òÓ¡Ä¿Â¼µÄ·½·¨,ĞÎ³Éµİ¹éµ÷ÓÃ.
+				System.out.println("æ–‡ä»¶å:  "+file.getAbsolutePath());
+			//å½“æ˜¯ç›®å½•æ—¶,ç»§ç»­è°ƒç”¨æ‰“å°ç›®å½•çš„æ–¹æ³•,å½¢æˆé€’å½’è°ƒç”¨.
 			}else {
-				System.out.println("Ä¿Â¼Ãû:  "+file.getAbsolutePath());
+				System.out.println("ç›®å½•å:  "+file.getAbsolutePath());
 				printDir(file);
 			}
 		}
